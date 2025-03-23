@@ -1,3 +1,37 @@
+# Ignore directories that aren't needed
 /node_modules
-/vendor
-.env
+/storage/framework/cache/**
+/storage/framework/sessions/**
+/storage/framework/views/**
+/storage/logs/**
+/tests
+/bootstrap/cache/**
+
+# Ignore vendor libraries that aren't essential for runtime
+/vendor/**/docs
+/vendor/**/tests
+/vendor/**/Test
+/vendor/**/.git
+/vendor/**/.github
+/vendor/**/examples
+/vendor/**/example
+/vendor/**/phpunit
+/vendor/**/php-cs-fixer
+/vendor/**/phpspec
+/vendor/**/composer.json
+/vendor/**/composer.lock
+/vendor/**/package.json
+/vendor/**/package-lock.json
+/vendor/**/README.md
+/vendor/**/LICENSE
+
+# Ignore dev files
+/resources/js
+/resources/sass
+
+# Project files
+README.md
+.gitignore
+.gitattributes
+.editorconfig
+.git

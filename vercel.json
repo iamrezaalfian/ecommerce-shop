@@ -28,7 +28,6 @@
         "DB_HOST": "61v9m.h.filess.io",
         "DB_PORT": "61000",
         "DB_DATABASE": "eshopdb_markdance",
-        "DB_USERNAME": "eshopdb_markdance",
-        "LOG_LEVEL": "debug"
+        "DB_USERNAME": "eshopdb_markdance"
     }
 }
