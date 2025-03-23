@@ -1,16 +1,15 @@
 {
     "version": 2,
-    "framework": null,
-    "functions": {
-        "api/index.php": { "runtime": "vercel-php@0.6.0" }
-    },
+    "builds": [
+        { "src": "api/index.php", "use": "vercel-php" },
+        { "src": "public/**", "use": "@vercel/static" }
+    ],
     "routes": [
-        { "src": "/build/(.*)", "dest": "/public/build/" },
+        { "src": "/build/(.*)", "dest": "/public/build/$1" },
+        { "src": "/(css|js|images|fonts|vendor)/(.*)", "dest": "/public/$1/$2" },
+        { "src": "/(favicon\\.ico|robots\\.txt|sitemap\\.xml)", "dest": "/public/$1" },
         { "src": "/(.*)", "dest": "/api/index.php" }
     ],
-    "public": true,
-    "buildCommand": "npm run prod",
-    "outputDirectory": "public",
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "false",
@@ -29,6 +28,7 @@
         "DB_HOST": "61v9m.h.filess.io",
         "DB_PORT": "61000",
         "DB_DATABASE": "eshopdb_markdance",
-        "DB_USERNAME": "eshopdb_markdance"
+        "DB_USERNAME": "eshopdb_markdance",
+        "LOG_LEVEL": "debug"
     }
 }
